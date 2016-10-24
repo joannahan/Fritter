@@ -1,0 +1,18 @@
+<tr id=1_{{_id}} class='freet-detail' data-author={{author._id}}>
+  <td>{{author.name}}</td>
+  <td>{{dateCreated}}</td>
+  <td> </td>
+  <td></td>
+</tr>	    
+<tr id=2_{{_id}} data-freet-id={{_id}} data-author={{author._id}} class='freet-detail'>
+  <td>{{content}}</td>
+  <td><input type='button' class='remove' data-freet-id={{_id}} data-author={{author._id}} value='Delete'></td>
+  <td><input type='button' id=refreet_button_{{_id}} class='refreet' data-freet-id={{_id}} data-author={{author._id}} value='Refreet'></td>
+  <td>
+	  <ul data-freet-id={{parent._id}}>
+		  {{#each refreetedBy}}
+		  	<li class='refreetby' data-refreet-id={{this._id}}>{{this.name}}</li>
+		  {{/each}}
+	  </ul>
+  </td>
+</tr>

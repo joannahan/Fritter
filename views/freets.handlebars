@@ -1,0 +1,38 @@
+<h2 class="page-header">Freets</h2>
+<form method="post" action="/freets" id=freetform data-preaction='getall'>
+	<div class="form-group">
+		<div id=login data-userid={{user.id}}></div>
+		<div id=loginuser data-user={{user}}></div> 
+		<label>Welcome, {{user.name}}!</label>
+	</div>
+	<div class="form-group">	
+		<label>Search fritters by user name:</label>
+		<input type="text" id="searchuser" class="form-control" placeholder="user name" name="searchname" value="">
+		<br>
+		<input type="button" id="search" value="Search">
+		<input type="button" id="getall" value="Get All">	
+		<input type="button" id="follow" value="Follow">	
+		<input type="button" id="unfollow" value="Unfollow">
+		<input type="button" id="getallfollow" value="Get All Follow">		
+	</div>
+	<div class="form-group">
+		<label>Post a fritter:</label>
+	    <textarea id="newfreet" class="form-control"  name="content" placeholder="Enter a freet..." value=""> </textarea>
+	  	<br>
+	  	<input type="button" id="post" value="Post">
+	</div>
+	<div class="form-group">
+		<label>Fritter board:</label>
+		<div id="fritterContainer">
+    		<div id='fritterlist'></div>	   
+			<br>
+	    </div>
+        <table id="freets-table" class="table table-striped">
+ 	     <tr>
+            <td><b></b></td>
+            <td><b></b></td>
+            <td><b></b></td>
+          </tr>
+        </table>
+	</div>
+</form>
